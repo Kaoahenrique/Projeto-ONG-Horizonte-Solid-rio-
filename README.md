@@ -30,7 +30,7 @@ O **Horizonte Solidário** é um site institucional de uma ONG fictícia desenvo
 ## 🌐 Acesso Online  
 
 Acesse a versão final do projeto clicando abaixo 👇  
-👉 **[Horizonte Solidário — Versão Final](https://Kaoahenrique.github.io/Projeto-ONG-Horizonte-Solid-rio-/projetos-ong/index.html)**  
+👉 **[Horizonte Solidário — Versão Final](https://kaoahenrique.github.io/Projeto-ONG-Horizonte-Solid-rio/)**
 
 > 📍 *O arquivo `index.html` dentro da pasta `projetos-ong/` contém o layout mais recente com CSS e JS aplicados.*
 
