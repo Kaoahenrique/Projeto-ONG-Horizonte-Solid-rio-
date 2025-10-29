@@ -566,3 +566,129 @@ body {
     color: #d1fae5;
   }
 }
+/* ======= TOASTS ======= */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: #198754;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ======= MODAL ======= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal.show {
+  display: flex;
+}
+.modal-panel {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+.modal-close {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+#btnDoeAgora {
+  animation: pulse 2s infinite;
+}
+/* ======= TOASTS ======= */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%) translateY(50px);
+  background: #198754;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 500;
+  opacity: 0;
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+.toast.visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* ======= MODAL ======= */
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+.modal.show {
+  display: flex;
+}
+.modal-panel {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 480px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  right: 16px;
+  top: 8px;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* ======= BOTÃO “DOE AGORA” PULSANTE ======= */
+#btnDoeAgora {
+  animation: pulse 2s infinite;
+}
+@keyframes pulse {
+  0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,128,0,0.4); }
+  70% { transform: scale(1.05); box-shadow: 0 0 0 15px rgba(0,128,0,0); }
+  100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,128,0,0); }
+}
+
+/* ======= ANIMAÇÕES DE ENTRADA ======= */
+.fade-section {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s ease-out;
+}
+.fade-section.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
