@@ -16,14 +16,14 @@
  ===================================================== */
 
 
-/* ========== 🧩 MENU MOBILE ========== */
+/* ========== 🧩 MENU MOBILE (fix definitivo) ========== */
 const navToggle = document.querySelector(".nav-toggle");
 const navList = document.getElementById("nav-list");
 
-if (navToggle) {
+if (navToggle && navList) {
   navToggle.addEventListener("click", () => {
-    const isOpen = navToggle.getAttribute("aria-expanded") === "true";
-    navToggle.setAttribute("aria-expanded", !isOpen);
+    const expanded = navToggle.getAttribute("aria-expanded") === "true";
+    navToggle.setAttribute("aria-expanded", !expanded);
     navList.classList.toggle("open");
   });
 }
@@ -178,3 +178,4 @@ document.querySelectorAll("section").forEach(sec => {
 
 /* ========== 📅 ANO AUTOMÁTICO NO RODAPÉ ========== */
 document.getElementById("year").textContent = new Date().getFullYear();
+
