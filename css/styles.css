@@ -691,58 +691,60 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-/* ======= FIX MENU MOBILE DEFINITIVO (BRANCO) ======= */
-.nav-toggle {
-  background: none;
-  border: none;
-  font-size: 1.8rem;
-  cursor: pointer;
-  color: #fff; /* agora branco */
-  z-index: 10001;
-  display: none;
-}
-
-.nav-toggle i {
-  color: #fff; /* ícone branco */
-  transition: color 0.3s ease;
-}
-
-.nav-toggle:hover i {
-  color: #e0e0e0; /* leve efeito ao passar o dedo */
-}
-
+/* ======= MENU MOBILE REFINADO (alinhado e visual limpo) ======= */
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
     position: absolute;
-    right: 20px;
-    top: 22px;
+    right: 18px;
+    top: 18px;
+    color: #fff; /* branco no fundo verde */
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    z-index: 10001;
+  }
+
+  .nav-toggle i {
+    color: #fff;
   }
 
   .nav-list {
     display: none;
     flex-direction: column;
     position: absolute;
-    top: 70px;
+    top: 70px; /* desce suavemente abaixo do header */
     right: 0;
-    background: #fff;
     width: 100%;
-    border-top: 1px solid #ddd;
+    background: #fefefe; /* branco limpo */
+    border-top: 2px solid #4caf50;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     text-align: center;
+    z-index: 9999;
   }
 
   .nav-list.open {
     display: flex;
+    animation: fadeIn 0.3s ease-in-out;
   }
 
   .nav-list a {
-    color: #333;
-    padding: 15px;
+    color: #2c2c2c;
+    padding: 15px 0;
+    font-weight: 500;
     border-bottom: 1px solid #eee;
   }
 
   .nav-list a:hover {
-    background: #f7f7f7;
+    background: #f4f4f4;
   }
 }
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
 
