@@ -691,23 +691,26 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
-/* ======= MENU MOBILE - Correção ======= */
+/* ======= FIX MENU MOBILE DEFINITIVO (BRANCO) ======= */
 .nav-toggle {
   background: none;
   border: none;
-  color: #333; /* cor neutra */
   font-size: 1.8rem;
   cursor: pointer;
-  display: none; /* escondido no desktop */
-  z-index: 9999;
+  color: #fff; /* agora branco */
+  z-index: 10001;
+  display: none;
 }
 
-.nav-toggle:focus {
-  outline: 2px solid #4CAF50; /* acessível */
-  outline-offset: 4px;
+.nav-toggle i {
+  color: #fff; /* ícone branco */
+  transition: color 0.3s ease;
 }
 
-/* Mostra o botão apenas no mobile */
+.nav-toggle:hover i {
+  color: #e0e0e0; /* leve efeito ao passar o dedo */
+}
+
 @media (max-width: 768px) {
   .nav-toggle {
     display: block;
@@ -719,12 +722,13 @@ body {
   .nav-list {
     display: none;
     flex-direction: column;
-    background: #fff;
     position: absolute;
-    right: 0;
     top: 70px;
+    right: 0;
+    background: #fff;
     width: 100%;
     border-top: 1px solid #ddd;
+    text-align: center;
   }
 
   .nav-list.open {
@@ -732,15 +736,13 @@ body {
   }
 
   .nav-list a {
-    padding: 12px;
-    text-align: center;
     color: #333;
+    padding: 15px;
     border-bottom: 1px solid #eee;
   }
 
   .nav-list a:hover {
-    background: #f5f5f5;
+    background: #f7f7f7;
   }
 }
-
 
